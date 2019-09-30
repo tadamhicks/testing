@@ -1,10 +1,11 @@
 ---
 - hosts: localhost
   vars:
-    hello: "hello"
+    hello: "{{ morpheus["customOptions"]["foo"] }}"
 
   tasks:
     - blockinfile:
+        create: yes
         path: "/tmp/testout.txt"
         block: |
-        {{ hello }}
+          {{ hello }}
