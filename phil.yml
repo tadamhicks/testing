@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  vars:
+    hello: "hello"
+
+  tasks:
+    - blockinfile:
+        path: "/tmp/testout.txt"
+        block: |
+        {{ hello }}
