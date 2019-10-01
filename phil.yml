@@ -4,6 +4,7 @@
     hello: "{{ morpheus["customOptions"]["foo"] }}"
 
   tasks:
+    - pause: minutes=1
     - blockinfile:
         create: yes
         path: "/tmp/testout.txt"
