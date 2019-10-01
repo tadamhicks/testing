@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   vars:
-    hello: "{{ morpheus['customOptions']['foo'] }}"
+    hello: "{{ morpheus['results']['foo'] }}"
 
   tasks:
     - pause: minutes=1
